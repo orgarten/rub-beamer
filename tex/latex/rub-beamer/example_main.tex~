@@ -1,0 +1,78 @@
+\documentclass[aspectratio=169]{beamer}
+%\usetheme[empty]{Rub}
+\usetheme[alternativetitlepage=alternativ]{Rub}
+% \usetheme[alternativetitlepage=bild]{Rub}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{textcomp}
+
+\title[Short Title]{The Title}
+\subtitle[subtitle]{The Subtitle}
+\author[Short Name]{Max Mustermann\textsuperscript{1}, Moritz Mustermann\textsuperscript{2} }
+\institute{\textsuperscript{1}Institute of Microwave Systems, \textsuperscript{2}Another Institute}
+
+\titlegraphic{title_pic.png}
+%\sponsorlogo[height=15mm]{MARIELogo.jpg}
+
+\begin{document}
+
+% plain option avoids footline on title page
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+\end{frame}
+
+
+\section{One Section}
+\begin{frame}
+  \frametitle{frame title}
+  \framesubtitle{frame subtitle}
+  \begin{columns}
+    \begin{column}{0.46 \textwidth}
+      \begin{itemize}
+        \item fact 1
+        \item fact 2
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46 \textwidth}
+      \begin{enumerate}
+        \item numbered fact
+        \item another numbered fact
+      \end{enumerate}
+    \end{column}    
+  \end{columns}
+\end{frame}
+
+\section{Another Section}
+\begin{frame}
+  \frametitle{frame title}
+  \framesubtitle{frame subtitle}
+  \begin{columns}
+    \begin{column}{0.46 \textwidth}
+      \begin{itemize}
+        \item a fact
+        \item this is fakenews
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46 \textwidth}
+      \begin{exampleblock}{An Exampleblock}
+        test
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \begin{alertblock}{An Alertblock}
+    test
+  \end{alertblock}
+  \begin{exampleblock}{An Exampleblock}
+    test
+  \end{exampleblock}
+\end{frame}
+
+
+\end{document}

@@ -1,5 +1,6 @@
 % Copyright 2007 by Till Tantau
 % Edited by Sebastian Jeworutzki 2012
+% Edited by Orell Garten 2019
 % This file may be distributed and/or modified
 %
 % 1. under the LaTeX Project Public License and/or
@@ -29,12 +30,12 @@
     \pgfdeclareimage[height=0.13\paperheight]{logo}{logo}
     % Weißer Hintergrund für den Frame Title
     \draw[anchor=north west, inner sep=0pt,style={white, line width=0pt, fill=white}] (current page.north west)
-    rectangle (0.9\paperwidth,-0.16\paperheight);
-
+    %rectangle (0.9\paperwidth,-0.16\paperheight);
+    rectangle (0.97\paperwidth, -0.95\paperheight);
     % Logo oben
     \ifbeamer@empty % Nicht im Empty-Modus ausführen
     \else
-    \node[anchor=north east,xshift=-0.05\paperwidth, rectangle, inner sep=0pt, yshift=1pt] at (current page.north east) {\pgfuseimage{logo}};
+    \node[anchor=north east,xshift=-0.02\paperwidth, rectangle, inner sep=0pt, yshift=1pt] at (current page.north east) {\pgfuseimage{logo}};
     % Wortmarke oben
     \node[anchor=west,xshift=0.03\paperwidth,yshift=-0.03\paperheight, rectangle, inner sep=0pt] at (current page.north west) { \begin{tiny}\textbf{RUHR-UNIVERSIT{\"A}T}~BOCHUM\end{tiny} };
     \fi
@@ -79,7 +80,7 @@
             \begin{beamercolorbox}[leftskip=.3cm,wd=\paperwidth,ht=0.3\beamer@headheight,sep=0.1cm]{section in head/foot}    
                 \usebeamerfont{section in head/foot}%
                 \hfill
-                \insertframenumber%$|$\inserttotalframenumber
+                \insertframenumber$|$\inserttotalframenumber
             \end{beamercolorbox}}
     \else
         \linethickness{0pt}
@@ -88,7 +89,7 @@
                 \usebeamerfont{section in head/foot}%
                 \insertshortauthor~$|$~\insertshorttitle~$|$~\insertshortdate
                 \hfill
-                \insertframenumber%$|$\inserttotalframenumber
+                \insertframenumber$|$\inserttotalframenumber
 		\hspace*{10pt}
             \end{beamercolorbox}}
     \fi
@@ -100,5 +101,4 @@
 
 \mode
 <all>
-
 
